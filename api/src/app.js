@@ -24,6 +24,7 @@ const sessionOptions = session({
 
 
 import userRoutes from './routes/user';
+import productRoutes from './routes/product';
 
 
 class App {
@@ -59,6 +60,7 @@ class App {
 
     routes() {
         this.app.use('/api/usuarios/', userRoutes);
+        this.app.use('/api/produtos/', productRoutes);
     }
 }
 
