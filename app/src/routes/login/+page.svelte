@@ -8,11 +8,7 @@
     const voltarHome = () => {
         goto('/');
     }
-
-    const hollowPurple = () => {
-        goto('/hollow');
-    }
-
+    
     const enviarFormulario = async (event: Event) => {
         event.preventDefault();
 
@@ -54,10 +50,6 @@
     <button class="btn-icon variant-filled-primary" on:click={voltarHome}>
         <iconify-icon icon="mdi:home"></iconify-icon>
     </button>
-
-    <button class="btn-icon" on:click={hollowPurple}>
-        <iconify-icon icon="mdi:"></iconify-icon>
-    </button>
 </div>
 
 
@@ -82,6 +74,7 @@
         align-items: center;
         height: 100vh;
     }
+    
     #login-form {
         display: flex;
         justify-content: center;
@@ -94,9 +87,11 @@
         margin-bottom: 10vh;
         box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     }
+
     #login-form button {
         margin-top: 1vh;
     }
+
     #login-form button:hover{
         transform: scale(1.1);
         transition: transform 0.5s;
@@ -118,6 +113,7 @@
         flex-direction: column;
         margin-top: 5vh;
     }
+
     .inputs-form label {
         font-size: 1rem;
         color: gray;
