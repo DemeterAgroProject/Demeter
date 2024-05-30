@@ -4,13 +4,19 @@
     const login = () => {
         goto('/login');
     }
+
+    const produtos = () => {
+        goto('/produtos');
+    }
     
 </script>
 
 <div class="header">
-    
     <button class="btn variant-filled-primary" on:click={login}>Login</button>
+    <button class="btn variant-filled-primary" on:click={produtos}>Produtos</button>
 </div>
+
+
 
 <style>
     .header {
