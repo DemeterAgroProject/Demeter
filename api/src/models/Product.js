@@ -47,12 +47,22 @@ class Product {
   }
 
 
-  async atualizar(id) {
+  static async atualizar(id) {
     this.valida();
 
     if(this.errors.length > 0) return;
 
     this.product = await ProductModel.findByIdAndUpdate(id, this.body);
+  }
+
+  static async deletar(id) {
+    if (typeof id !== 'string') return null;
+    try {
+      return await ProductModel.findByIdAndDelete(id);
+    } catch (error) {
+      console.error(error);
+      throw new Error('Erro ao deletar produto');
+    }
   }
 
   valida() {
