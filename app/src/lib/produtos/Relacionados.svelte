@@ -48,6 +48,7 @@
     }
     .cards-relacionados {
         display: flex;
+        gap: 2.5rem;
         justify-content: center;  
     }
 </style>
