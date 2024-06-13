@@ -7,7 +7,7 @@
 <div class="img-info">
     <img 
     src="https://images.caminhoesecarretas.com.br/cliente_020650/veiculos/1173069_whatsapp%20image%202024-04-05%20at%2018.12.53_big.jpeg" 
-    alt="Semeadora" width="45%"
+    alt="Semeadora" width="62%"
     class="rounded-lg"
     />
     <Informacoes title="Produto nome" />
@@ -23,7 +23,3 @@
         margin: 1rem;
     }
 </style>
-
-
-
-
