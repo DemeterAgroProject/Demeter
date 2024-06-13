@@ -5,6 +5,7 @@ const { create } = require('connect-mongo');
 const ProductSchema = new mongoose.Schema({
   status: { type: String, required: true },
   marca: { type: String, required: true },
+  descricao: { type: String, required: true },
   modelo: { type: String, required: true },
   potencia: { type: Number, required: true },
   funcao: { type: String, required: true },
@@ -70,6 +71,7 @@ class Product {
 
     if(this.body.modelo == '') this.errors.push('Modelo é um campo obrigatório.');
     if(this.body.marca == '') this.errors.push('Marca é um campo obrigatório.');
+    if(this.body.descricao == '') this.errors.push('Descrição é um campo obrigatório.');
     if(this.body.potencia == '') this.errors.push('Potência é um campo obrigatório.');
     if(this.body.funcao == '') this.errors.push('Função é um campo obrigatório.');
     if(this.body.odometro == '') this.errors.push('Odômetro é um campo obrigatório.');
@@ -80,6 +82,7 @@ class Product {
     this.body = {
       status: this.body.status,
       marca: this.body.marca,
+      descricao: this.body.descricao,
       modelo: this.body.modelo,
       potencia: this.body.potencia,
       funcao: this.body.funcao,
