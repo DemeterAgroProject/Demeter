@@ -13,11 +13,11 @@ const helmet = require('helmet');
 const session = require('express-session');
 const sessionOptions = session({
     secret: process.env.SECRET,
-    store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING }),
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING, ttl: 60 * 60, autoRemove: 'native'}),
     resave: false,
     saveUninitialized: false,
     cookie: {
-        maxAge: 1000 * 60 * 60 * 1,
+        maxAge: 1000 * 60 * 60,
         httpOnly: true
     }
 });

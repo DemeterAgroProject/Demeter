@@ -55,3 +55,16 @@ exports.atualizar = async function(req, res) {
         return res.json({erro: e});
     }
 }
+
+exports.deletar = async function(req, res) {
+    try {
+        const result = await Product.deletar(req.params.id);
+        if (!result) {
+            return res.status(404).json({ erro: 'Produto não encontrado.' });
+        }
+        res.json({ deletado: true });
+    } catch (e) {
+        console.log(e);
+        return res.json({ erro: e.message });
+    }
+};
