@@ -1,6 +1,47 @@
-<script>
-    export let title = 'Informações do Produto';
-    export let reviews = '5 avaliações';  // Adicione esta linha para o texto de avaliações
+<script lang='ts'>
+    import { onMount } from 'svelte';
+
+    export let id_do_produto: string;
+
+    let title: string = '';
+    let reviews: string = '5 avaliações';
+    let descricao: string = '';
+
+    // Função para buscar os dados do produto na API
+    async function fetchProduto(id: string) {
+        try {
+            const response = await fetch(`http://localhost:3000/api/produtos/listar/${id}`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Erro ao buscar os dados do produto:', error);
+            return null;
+        }
+    }
+
+    async function fetchProdutos() {
+        try {
+            const response = await fetch(`http://localhost:3000/api/produtos/listar`);
+            const data = await response.json();
+            console.log(data);
+            return data;
+        } catch (error) {
+            console.error('Erro ao buscar os dados do produto:', error);
+            return null;
+        }
+    }
+
+    // Carregar os dados do produto quando o componente for montado
+    onMount(async () => {
+
+        const produtos = await fetchProdutos();
+
+        const produto = await fetchProduto(id_do_produto);
+        if (produto) {
+            title = `${produto.marca} ${produto.modelo}`;
+            descricao = produto.descricao;
+        }
+    });
 </script>
 
 <div class="produtos-info">
@@ -27,17 +68,7 @@
     </div>
     <div class="info">
         <p class="text-lg text-slate-900 custom-desc">
-            Mussum Ipsum, cacilds vidis litro abertis. 
-            Não sou faixa preta cumpadi, sou preto inteiris, inteiris. 
-            Detraxit consequat et quo num tendi nada. 
-            Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
-            Si num tem leite então bota uma pinga aí cumpadi!
-            Mussum Ipsum, cacilds vidis litro abertis. 
-            Não sou faixa preta cumpadi, sou preto inteiris, inteiris. 
-            Detraxit consequat et quo num tendi nada. 
-            Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
-            Si num tem leite então bota uma pinga aí cumpadi!
-            Mussum Ipsum, cacilds vidis litro abertis. 
+            {descricao}
         </p>
     </div>
     <div class="price">
