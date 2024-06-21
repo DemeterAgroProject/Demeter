@@ -1,12 +1,13 @@
-import Product from '../models/Product';
+import Advertisement from '../models/Advertisement';
+import Machine from '../models/Machine';
 
 exports.cadastrar = async function(req, res) {
     try {
-        const produto = new Product(req.body);
-        await produto.cadastrar();
+        const anuncio = new Advertisement(req.body);
+        await anuncio.cadastrar();
     
-        if(produto.errors.length > 0) {
-            res.json({erro: produto.errors})
+        if(anuncio.errors.length > 0) {
+            res.json({erro: anuncio.errors})
             return;
         }
     
@@ -20,8 +21,8 @@ exports.cadastrar = async function(req, res) {
 
 exports.listar = async function(req, res) {
     try {
-        const produtos = await Product.listar();
-        res.json(produtos);
+        const anuncios = await Advertisement.listar();
+        res.json(anuncios);
     } catch(e) {
         console.log(e);
         return res.json({erro: e});
@@ -30,21 +31,33 @@ exports.listar = async function(req, res) {
 
 exports.getId = async function(req, res) {
     try {
-        const produto = await Product.findById(req.params.id);
-        res.json(produto);
+        const anuncio = await Advertisement.findById(req.params.id);
+        res.json(anuncio);
     } catch(e) {
         console.log(e);
         return res.json({erro: e});
     }
 }
 
+exports.getProductByAdvertisementId = async function(req, res) {
+    try {
+        const anuncio = await Advertisement.findById(req.params.id);
+        const maquina = await Machine.findById(anuncio.productId);
+        res.json(maquina);
+    } catch(e) {
+        console.log(e);
+        return res.json({erro: e});
+    }
+
+}
+
 exports.atualizar = async function(req, res) {
     try {
-        const produto = new Product(req.body);
-        await produto.atualizar(req.params.id);
+        const anuncio = new Advertisement(req.body);
+        await anuncio.atualizar(req.params.id);
     
-        if(produto.errors.length > 0) {
-            res.json({erro: produto.errors})
+        if(anuncio.errors.length > 0) {
+            res.json({erro: anuncio.errors})
             return;
         }
     
@@ -58,7 +71,7 @@ exports.atualizar = async function(req, res) {
 
 exports.deletar = async function(req, res) {
     try {
-        const result = await Product.deletar(req.params.id);
+        const result = await Advertisement.deletar(req.params.id);
         if (!result) {
             return res.status(404).json({ erro: 'Produto não encontrado.' });
         }
