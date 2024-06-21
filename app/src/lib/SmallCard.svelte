@@ -10,8 +10,8 @@
 
 </script>
 
-<div class="hover-up relative ml-5 mb-5 flex w-full max-w-64 max-h-96 flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-md">
-    <div class="relative mx-3 mt-3 flex h-60 overflow-hidden rounded-lg">
+<div class=" custom-shadow hover-up relative mb-6 flex w-full max-w-64 max-h-96 flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white">
+    <div class="relative mx-4 mt-3 flex h-60 overflow-hidden rounded-lg">
         <img class="object-contain w-full h-full rounded-lg" src="{image}" alt="{brand}" />
     </div>
     <div class="mt-4 px-5 pb-5">
@@ -43,4 +43,8 @@
         overflow: hidden;
         word-break: break-all;
     }
+    .custom-shadow {
+        box-shadow: 0 0 3px #eaeaea;
+    }
+
 </style>
