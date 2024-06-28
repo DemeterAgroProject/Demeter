@@ -13,7 +13,7 @@ const helmet = require('helmet');
 const session = require('express-session');
 const sessionOptions = session({
     secret: process.env.SECRET,
-    store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING, ttl: 60 * 60, autoRemove: 'native'}),
+    store: MongoStore.create({ mongoUrl: process.env.CONNECTION_STRING_SERVER, ttl: 60 * 60, autoRemove: 'native'}),
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -36,7 +36,7 @@ class App {
     }
 
     connect_db() {
-        mongoose.connect(process.env.CONNECTION_STRING)
+        mongoose.connect(process.env.CONNECTION_STRING_SERVER)
             .then(() => {
                 this.app.emit('ready')
             })
