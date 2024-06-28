@@ -3,9 +3,9 @@
 
     export let id_do_produto: string;
 
-    let title: string = '';
+    let title: string = 'Trator XYZ';
     let reviews: string = '5 avaliações';
-    let descricao: string = '';
+    let descricao: string = 'Mussum Ipsum, cacilds vidis litro abertis.  Suco de cevadiss deixa as pessoas mais interessantis. Ô gente finis, pode baixar uma ampolis que hoje é sexta-feris! Aenean aliquam molestie leo, vitae iaculis nisl. Quem manda na minha terra sou euzis!';
 
     // Função para buscar os dados do produto (unico) na API
     async function fetchProduto(id: string) {
@@ -35,7 +35,7 @@
     // Carregar os dados do produto quando o componente for montado
     onMount(async () => {
 
-        const produtos = await fetchProdutos();
+       const produtos = await fetchProdutos();
 
         const produto = await fetchProduto(id_do_produto);
         if (produto) {

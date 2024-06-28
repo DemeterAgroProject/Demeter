@@ -1,26 +1,23 @@
-<script>
-    import { onMount } from "svelte";
+<script lang="ts">
 
-    let lastScrollTop = 0;
-    let isScrollingUp = true;
+import { onNavigate } from '$app/navigation';
 
-    onMount(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    });
+onNavigate((navigation) => {
+    //@ts-ignore
+	if (!document.startViewTransition) return;
 
-    function handleScroll() {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        if (scrollTop < lastScrollTop) {
-            isScrollingUp = true;
-        } else {
-            isScrollingUp = false;
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    }
+	return new Promise((resolve) => {
+        //@ts-ignore
+		document.startViewTransition(async () => {
+			resolve();
+			await navigation.complete;
+		});
+	});
+});
+
 </script>
 
-<header class:scrolling-up={isScrollingUp}>
+<header>
     <div class="logo">Demeter</div>
     <nav class="nav-links">
         <a href="/">Home</a>
@@ -46,10 +43,10 @@
         transition: top 0.3s;
         position: fixed;
         width: 100%;
-        top: -10vh; /* Esconde o header inicialmente */
-    }
-    .scrolling-up {
-        top: 0; /* Mostra o header quando rolando para cima */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; 
     }
     .logo {
         font-size: 1.5em;
