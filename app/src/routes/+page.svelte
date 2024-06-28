@@ -1,28 +1,10 @@
 <script lang="ts">
-    import { goto } from '$app/navigation';
+    import Header from '$lib/Header.svelte';
 
-    const login = () => {
-        goto('/login');
-    }
-
-    const produtos = () => {
-        goto('/produtos');
-    }
     
 </script>
 
-<div class="header">
-    <button class="btn variant-filled-primary" on:click={login}>Login</button>
-    <button class="btn variant-filled-primary" on:click={produtos}>Produtos</button>
-</div>
+<Header />
 
 
 
-<style>
-    .header {
-        display: flex;
-        justify-content: flex-end;
-        padding: 10px;
-    }
-
-</style>

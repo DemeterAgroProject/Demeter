@@ -3,11 +3,11 @@
 
     export let id_do_produto: string;
 
-    let title: string = '';
+    let title: string = 'Trator XYZ';
     let reviews: string = '5 avaliações';
-    let descricao: string = '';
+    let descricao: string = 'Mussum Ipsum, cacilds vidis litro abertis.  Suco de cevadiss deixa as pessoas mais interessantis. Ô gente finis, pode baixar uma ampolis que hoje é sexta-feris! Aenean aliquam molestie leo, vitae iaculis nisl. Quem manda na minha terra sou euzis!';
 
-    // Função para buscar os dados do produto na API
+    // Função para buscar os dados do produto (unico) na API
     async function fetchProduto(id: string) {
         try {
             const response = await fetch(`http://localhost:3000/api/produtos/listar/${id}`);
@@ -19,6 +19,7 @@
         }
     }
 
+    // Função para buscar os dados dos produtos na API - Teste
     async function fetchProdutos() {
         try {
             const response = await fetch(`http://localhost:3000/api/produtos/listar`);
@@ -34,7 +35,7 @@
     // Carregar os dados do produto quando o componente for montado
     onMount(async () => {
 
-        const produtos = await fetchProdutos();
+       const produtos = await fetchProdutos();
 
         const produto = await fetchProduto(id_do_produto);
         if (produto) {
@@ -86,7 +87,7 @@
         box-shadow: 0 0 5px #d4d4d4;
         border-radius: 1rem;
         width: 35%;
-        height: 80vh;
+        height: 70vh;
         overflow: hidden; 
     }
     .info {
