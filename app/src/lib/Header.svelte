@@ -47,6 +47,7 @@ onNavigate((navigation) => {
         left: 0;
         width: 100%;
         z-index: 1000; 
+        view-transition-name: header;
     }
     .logo {
         font-size: 1.5em;
