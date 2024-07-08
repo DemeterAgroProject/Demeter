@@ -15,7 +15,7 @@
             alt="Semeadora" width="60%"
             class="rounded-lg "
             />
-            <Informacoes id_do_produto="666b51012f6ca1ab99cff096" />
+            <Informacoes id_do_produto="667eedfe57f7519c60e0e3dc" />
         </div>
         <Relacionados />
         <Descricao />
