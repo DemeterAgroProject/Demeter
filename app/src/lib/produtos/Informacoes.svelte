@@ -4,9 +4,9 @@
 
     export let id_do_produto: string;
 
-    let title: string = '';
+    let title: string = 'Maquininha das E-girl';
     let reviews: string = '5 avaliações';
-    let descricao: string = '';
+    let descricao: string = 'Mussum Ipsum, cacilds vidis litro abertis.  Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Detraxit consequat et quo num tendi nada.';
     let isLoading: boolean = true;
 
     // Função para buscar os dados do produto (unico) na API
@@ -82,14 +82,14 @@
         border-radius: 1rem;
         width: 35%;
         height: 70vh;
-        overflow: hidden; 
+        overflow: hidden;
     }
     .info {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 1rem;
-        overflow-y: auto; 
+        overflow-y: auto;
     }
     .price {
         display: flex;
@@ -99,7 +99,7 @@
     }
     .custom-desc {
         margin: 1rem;
-        word-break: break-word; 
+        word-break: break-word;
         text-align: justify;
     }
     .flex {
