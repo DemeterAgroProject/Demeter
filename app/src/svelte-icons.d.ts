@@ -38,10 +38,6 @@ declare module 'svelte-icons/md/MdLocalGasStation.svelte' {
     export default class MdLocalGasStation extends SvelteComponentTyped {}
 }
 
-// import IoMdStar from 'svelte-icons/io/IoMdStar.svelte'
-// import IoMdStarHalf from 'svelte-icons/io/IoMdStarHalf.svelte'
-// import IoMdStarOutline from 'svelte-icons/io/IoMdStarOutline.svelte'
-
 declare module 'svelte-icons/io/IoMdStar.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class IoMdStar extends SvelteComponentTyped {}
@@ -55,4 +51,20 @@ declare module 'svelte-icons/io/IoMdStarHalf.svelte' {
 declare module 'svelte-icons/io/IoMdStarOutline.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class IoMdStarOutline extends SvelteComponentTyped {}
+
+}
+
+declare module 'svelte-icons/fa/FaTractor.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class FaTractor extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoMdChatbubbles.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdChatbubbles extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoMdMegaphone.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdMegaphone extends SvelteComponentTyped {}
 }
