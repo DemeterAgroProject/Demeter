@@ -6,8 +6,13 @@
     import IoIosConstruct from 'svelte-icons/io/IoIosConstruct.svelte'
     import IoIosCalendar from 'svelte-icons/io/IoIosCalendar.svelte'
     import MdLocalGasStation from 'svelte-icons/md/MdLocalGasStation.svelte'
+    import IoMdStar from 'svelte-icons/io/IoMdStar.svelte'
+    import IoMdStarHalf from 'svelte-icons/io/IoMdStarHalf.svelte'
+    import IoMdStarOutline from 'svelte-icons/io/IoMdStarOutline.svelte'
+    import { Ratings } from '@skeletonlabs/skeleton';
 
     export let id_do_produto: string;
+    let value = { current: 3.5, max: 5 };
 
     let title: string = 'Maquina teste';
     let reviews: string = '(10)';
@@ -52,6 +57,13 @@
         }
         isLoading = false;
     });
+
+    
+    function iconClick(event: CustomEvent<{index:number}>): void {
+        value.current = event.detail.index;
+    }
+						
+
 </script>
 
 <div class="produtos-info">
@@ -61,21 +73,25 @@
         <h1 class="text-md font-semibold text-slate-900 text-center m-1">{title}</h1>
         <div class="flex justify-center items-center mb-1">
             <p class="mr-1 text-xs font-medium text-slate-700">{score}</p>
-            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
-            <svg aria-hidden="true" class="h-3 w-3 text-yellow-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-            </svg>
+            <div class="no-tap-highlight">
+                <Ratings bind:value={value.current} max={value.max} interactive on:icon={iconClick}>
+                    <svelte:fragment slot="empty">
+                        <div class="h-4 w-4 text-yellow-400">
+                            <IoMdStarOutline/>
+                        </div>
+                    </svelte:fragment>
+                    <svelte:fragment slot="half">
+                        <div class="h-4 w-4 text-yellow-400"> 
+                            <IoMdStarHalf/> 
+                        </div>
+                    </svelte:fragment>
+                    <svelte:fragment slot="full"> 
+                        <div class="h-4 w-4 text-yellow-400"> 
+                            <IoMdStar/>
+                        </div> 
+                    </svelte:fragment>
+                </Ratings>
+            </div>
             <p class="ml-1 text-xs font-medium text-slate-700">{reviews}</p>
         </div>
         <img
@@ -83,8 +99,9 @@
             alt="Semeadora"
             class="mt-2 mb-2 rounded-md"
         />
-        <p class="text-2xl font-medium text-slate-900 m-2">R$ {price}</p>
-        <a href="/" class=" btn variant-filled-primary text-black font-medium py-2 px-4 rounded-full w-full" data-sveltekit-preload-data="hover">Abrir Negociações</a>
+        <p class="text-2xl font-medium text-slate-900 mb-2">R$ {price}</p>
+        <p class="text-slate-900 mb-4">Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Mauris nec dolor in eros commodo tempor.</p>
+        <a href="/" class="no-tap-highlight btn variant-filled-primary text-black font-medium py-2 px-4 rounded-full w-full" data-sveltekit-preload-data="hover">Abrir Negociações</a>
         <div class="">
             <h2 class="text-md font-semibold text-slate-900 text-center m-5">Características</h2>
             <ul class="list-none list-inside space-y-2">
@@ -102,7 +119,7 @@
                             <IoIosSpeedometer/>
                         </div>
                     </span>
-                    Potência: <b>1500 HP</b>
+                    Potência: <b>150 HP</b>
                 </li>
                 <li class="flex items-center space-x-2">
                     <span class="inline-flex items-center justify-center h-8 w-8 rounded-full variant-filled-primary mr-2">

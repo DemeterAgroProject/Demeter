@@ -20,7 +20,7 @@
     }
 </script>
 
-<h2 class="text-md font-semibold text-slate-900 text-center m-5">Produtos Relacionados</h2>
+<h2 class="text-md font-semibold text-slate-900 text-center my-5">Produtos Relacionados</h2>
 <div class="grid grid-cols-[auto_1fr_auto] gap-4 gap-x-2 items-center">
     <!-- Botão: Esquerda -->
     <button type="button" class="btn-icon variant-filled-primary hidden md:block btn-left" on:click={multiColumnLeft}>

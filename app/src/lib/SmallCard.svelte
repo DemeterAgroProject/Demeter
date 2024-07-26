@@ -5,7 +5,7 @@
     export let price = '';
 </script>
 
-<a href="/produtos">
+<a href="/produtos" class="no-tap-highlight">
     <div class="custom-shadow hover-up relative m-2 flex w-full max-w-56 max-h-80 flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white">
         <div class="relative mx-4 mt-3 flex h-60 overflow-hidden rounded-lg">
             <img class="object-contain w-full h-full rounded-lg" src="{image}" alt="{brand}" />

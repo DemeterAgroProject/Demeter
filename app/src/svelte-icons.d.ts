@@ -37,3 +37,22 @@ declare module 'svelte-icons/md/MdLocalGasStation.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class MdLocalGasStation extends SvelteComponentTyped {}
 }
+
+// import IoMdStar from 'svelte-icons/io/IoMdStar.svelte'
+// import IoMdStarHalf from 'svelte-icons/io/IoMdStarHalf.svelte'
+// import IoMdStarOutline from 'svelte-icons/io/IoMdStarOutline.svelte'
+
+declare module 'svelte-icons/io/IoMdStar.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdStar extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoMdStarHalf.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdStarHalf extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoMdStarOutline.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdStarOutline extends SvelteComponentTyped {}
+}
