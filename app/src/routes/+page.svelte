@@ -3,7 +3,7 @@
     import Relacionados from '$lib/produtos/Relacionados.svelte';
 </script>
 
+<Header />
 <div class="w-4/5 mx-auto">
-    <Header />
     <Relacionados />
 </div>
