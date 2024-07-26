@@ -5,7 +5,7 @@
   import Relacionados from "$lib/produtos/Relacionados.svelte";
 </script>
 
-
+<Header />
 <div class="general p-6 ">
   <div class="general-body grid gap-4 grid-cols-1 lg:grid-cols-3">
     <div
