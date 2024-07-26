@@ -17,6 +17,10 @@
     <div class="col-span-1 mt-4 lg:mt-0">
       <Relacionados />
     </div>
+
+    <div class="col-span-1">
+      <Descricao />
+    </div>
   </div>
 </div>
 
