@@ -52,29 +52,49 @@
         >
           <div class="hidden sm:block">
             <div class="flex space-x-4">
+              <span class="py-2 h-9 w-9">
+                <IoIosHome />
+              </span>
               <a
-                href="/"
-                class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
-                >Home</a
+              href="/"
+              class="rounded-md pr-5 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
               >
+              Home </a
+              >
+
+              <span class="py-2 h-9 w-9">
+                <FaTractor />
+              </span>
               <a
                 href="/produtos"
-                class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
+                class="rounded-md pr-5 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
                 >Máquinas</a
               >
+              
+              <span class="py-2 h-9 w-9">
+                <IoMdMegaphone />
+              </span>
               <a
-                href="/anunciar"
-                class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
-                >Anunciar</a
+                href="/anuncios"
+                class="rounded-md pr-5 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
+                >Meus Anúncios</a
               >
+
+              <span class="py-2 h-9 w-9">
+                <IoIosAlbums />
+              </span>
               <a
                 href="/historico"
-                class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
+                class="rounded-md pr-5 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
                 >Histórico</a
               >
+
+              <span class="py-2 h-9 w-9">
+                <IoMdChatbubbles />
+              </span>
               <a
                 href="/chat"
-                class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
+                class="rounded-md pr-5 py-2 text-sm font-medium text-black-300 hover:bg-black-700 hover:text-white"
                 >Chat</a
               >
             </div>
@@ -285,7 +305,7 @@
           Máquinas
         </a>
         <a
-          href="/anunciar"
+          href="/anuncios"
           class="block rounded-md px-3 py-2 text-base font-medium text-black-300 hover:bg-black-700 hover:text-white flex items-center"
         >
           <span
@@ -295,7 +315,7 @@
               <IoMdMegaphone />
             </div>
           </span>
-          Anunciar
+          Meus Anúncios
         </a>
         <a
           href="/historico"

@@ -73,3 +73,13 @@ declare module 'svelte-icons/io/IoIosAlbums.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class IoIosAlbums extends SvelteComponentTyped {}
 }
+
+declare module 'svelte-icons/io/IoMdSend.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdSend extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoIosAdd.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoMdSend extends SvelteComponentTyped {}
+}
