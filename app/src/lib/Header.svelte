@@ -4,6 +4,7 @@
   import FaTractor from "svelte-icons/fa/FaTractor.svelte";
   import IoMdChatbubbles from "svelte-icons/io/IoMdChatbubbles.svelte";
   import IoMdMegaphone from "svelte-icons/io/IoMdMegaphone.svelte";
+  import IoIosAlbums from 'svelte-icons/io/IoIosAlbums.svelte'
 
   onNavigate((navigation) => {
     //@ts-ignore
@@ -207,7 +208,7 @@
     <div class={mobileMenuOpen ? "block" : "hidden"} id="mobile-menu">
       <div class="space-y-1 px-2 pb-3 pt-2">
         <!-- Ícone de usuário (mobile) -->
-        <div class="flex items-center rounded-md px-3 py-2 justify-center">
+        <div class="flex items-center rounded-md px-3 py-2">
           <button
             type="button"
             class="relative flex rounded-full bg-black-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black-800"
@@ -221,6 +222,7 @@
               src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
               alt="User"
             />
+            <b class="ml-2">Eduardo Prates Tiadoro</b>
           </button>
 
           <div
@@ -299,6 +301,13 @@
           href="/historico"
           class="block rounded-md px-3 py-2 text-base font-medium text-black-300 hover:bg-black-700 hover:text-white flex items-center"
         >
+        <span
+        class="inline-flex items-center justify-center h-8 w-8 rounded-full variant-filled-primary mr-2"
+        >
+          <div class="h-6 w-6 flex items-center justify-center">
+            <IoIosAlbums/>
+          </div>
+        </span>
           Histórico
         </a>
         <a
@@ -320,4 +329,7 @@
 </header>
 
 <style>
+  header {
+	  view-transition-name: header;
+  }
 </style>
