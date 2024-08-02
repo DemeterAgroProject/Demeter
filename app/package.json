@@ -32,6 +32,7 @@
   "dependencies": {
     "embla-carousel-svelte": "^8.1.6",
     "iconify-icon": "^2.1.0",
+    "quill": "^2.0.2",
     "svelte-icons": "^2.1.0"
   }
 }

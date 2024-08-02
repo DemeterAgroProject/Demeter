@@ -24,6 +24,7 @@ const sessionOptions = session({
 
 
 import userRoutes from './routes/user';
+import brandRoutes from './routes/brand';
 import machineRoutes from './routes/machine';
 import advertisementRoutes from './routes/advertisement';
 
@@ -60,6 +61,7 @@ class App {
 
     routes() {
         this.app.use('/api/usuarios/', userRoutes);
+        this.app.use('/api/marcas/', brandRoutes);
         this.app.use('/api/maquinas/', machineRoutes);
         this.app.use('/api/anuncios/', advertisementRoutes);
     }

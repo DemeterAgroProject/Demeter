@@ -6,8 +6,7 @@ const MachineSchema = new mongoose.Schema({
   modelo: { type: String, required: true },
   marca: { type: String, required: true },
   funcao: { type: String, required: true },
-  potencia: { type: Number, required: true },
-  ano: { type: Number, required: true }
+  caracteristicas: { type: mongoose.Schema.Types.Mixed, required: true }
 });
 
 const MachineModel = mongoose.model('Machine', MachineSchema);
@@ -69,8 +68,6 @@ class Machine {
     if(this.body.modelo == '') this.errors.push('Modelo é um campo obrigatório.');
     if(this.body.marca == '') this.errors.push('Marca é um campo obrigatório.');
     if(this.body.funcao == '') this.errors.push('Função é um campo obrigatório.');
-    if(this.body.potencia == '') this.errors.push('Potência é um campo obrigatório.');
-    if(this.body.ano == '') this.errors.push('Ano é um campo obrigatório.');
   }
 
   cleanUp() {
@@ -78,8 +75,7 @@ class Machine {
       modelo: this.body.modelo,
       marca: this.body.marca,
       funcao: this.body.funcao,
-      potencia: this.body.potencia,
-      ano: this.body.ano,
+      caracteristicas: this.body.caracteristicas
     };
   }
 }
