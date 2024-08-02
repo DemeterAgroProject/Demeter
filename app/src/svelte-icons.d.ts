@@ -68,3 +68,8 @@ declare module 'svelte-icons/io/IoMdMegaphone.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class IoMdMegaphone extends SvelteComponentTyped {}
 }
+
+declare module 'svelte-icons/io/IoIosAlbums.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoIosAlbums extends SvelteComponentTyped {}
+}

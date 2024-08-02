@@ -13,7 +13,7 @@
     >
       <Informacoes id_do_produto="667ee469b77fad0b73dc2462" />
     </div>
-
+    
     <div class="col-span-1 mt-4 lg:mt-0">
       <Relacionados />
     </div>
