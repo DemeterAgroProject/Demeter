@@ -27,42 +27,42 @@
         <TiArrowLeft />
     </button>
     <!-- Carrossel -->
-    <div bind:this={elements} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 overflow-x-auto md:overflow-hidden">
+    <div bind:this={elements} class="snap-x snap-mandatory scroll-smooth flex pb-2 overflow-x-auto md:overflow-hidden">
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={6000000}
         />
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={69999}
         />
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={50000}
         />
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={1000}
         />
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={1000000}
         />
         <SmallCard
             title="SemeadoraSemeador"
             brand="New Holland"
             image="https://semeato.com.br/upload/produtos_6_111_1533821794.png"
-            price="R$ 100.000,00"
+            price={10000000}
         />
     </div>
     <!-- Botão: Direita -->

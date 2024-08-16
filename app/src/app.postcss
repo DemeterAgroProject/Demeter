@@ -4,7 +4,12 @@
 @tailwind variants;
 
 @layer utilities {
-    .no-tap-highlight {
-      -webkit-tap-highlight-color: transparent;
-    }
+  .no-tap-highlight {
+    -webkit-tap-highlight-color: transparent;
   }
+}
+
+/* Aplica para todos os botões */
+.btn {
+  @apply hover:brightness-95;
+}
