@@ -83,3 +83,19 @@ declare module 'svelte-icons/io/IoIosAdd.svelte' {
     import { SvelteComponentTyped } from 'svelte';
     export default class IoMdSend extends SvelteComponentTyped {}
 }
+
+declare module 'svelte-icons/io/IoIosArrowDown.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoIosArrowDown extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/io/IoIosArrowUp.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class IoIosArrowUp extends SvelteComponentTyped {}
+}
+
+declare module 'svelte-icons/gi/GiSteeringWheel.svelte' {
+    import { SvelteComponentTyped } from 'svelte';
+    export default class GiSteeringWheel extends SvelteComponentTyped {}
+}
+
